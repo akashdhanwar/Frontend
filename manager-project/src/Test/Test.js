@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Test.css";
 
-import logo from "../logo.svg";
+import logo from "../assets/images/react-logo.svg";
 const content = [
   [
     "React is extremely popular",
@@ -32,8 +32,8 @@ export default function Test() {
   const [activeContentIndex, setActiveContentIndex] = useState(0);
 
   return (
-    <div>
-      <header>
+    <div className="test">
+      <header className="testHeader">
         <img src={logo} alt="React logo" />
         <div>
           <h1>React.js</h1>
