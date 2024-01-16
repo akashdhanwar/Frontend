@@ -1,0 +1,380 @@
+1) WELCOME
+    (Lec-1) Course Structure and Projects
+    (Lec-2) Read Before You Start (Text File)
+    (Lec-3) Watch Before You Start!
+    (Lec-4) Migration Guide to Old Course (Text File)
+    (Lec-5) Setting Up Our Code Editor
+
+2) JAVASCRIPT FUNDAMENTALS - PART-1
+    (Lec-6) Section Info
+    (Lec-7) Hello World
+    (Lec-8) A Brief Introduction To JavaScript
+            JavaScript is a High-level, Object-oriented, Multi-paradigm programming language
+                High-level              -   Don't have to worry about complex stuff like memory management 
+                Object-oriented         -   Based on objects, for storing most kinds of data
+                Multi-paradigm          -   We can use different styles of language like Imperitive and Declarative
+                Programming language    -   Instruct computer to do things
+            Role of JavaScript in Web Development
+                HTML for Content(Nouns)
+                CSS for Styling(Adjectives)
+                JavaScript is Programming Language for Dynamic Effects and DOM manipulation(Verbs)
+    (Lec-9) Linking A JavaScript File
+            Using src attribute of script tag
+    (Lec-10) Values And Variables
+            const name = "Akash"; 
+            Akash is value and name is variable
+            Variable should be camelCase(Standard), int can be used as a variable name but should not be used.
+            Variable should not Start with number, _ and $ are allowed, Numbers and Letters allowed, reserved keywords not allowed
+    (Lec-11) Practice Assignments (Text File)
+    (Lec-12) Data Types
+            Primitive(7 - Number, String, Boolean, undefined, null, Symbol, BigInt) and Objects
+            Note    -   BigInt intoduced in ES2020
+                        Value has type, not Variable
+                        typeof null is object and this is a bug
+    (Lec-13) let, const and var
+            const should be initialised else error 
+            We can use variable without using let/var/const, it will declare that variable in global scope which is not recommended
+            Should use const by default
+    (Lec-14) Basic Operators
+            Operator allows to transform/combine multiple values
+            Mathematical Operators  -   Subtract(-)
+                                        Multiply(*)
+                                        Divide(/)
+                                        Exponentian(**)
+                                        Plus(+) - Concatinate/Add
+            Assignment operators    -   Equal(=)
+                                        += *= /= -=
+                                        ++ --
+            Comparison Operators    -   > >= <= < > -   Gives boolean
+    (Lec-15) Operator Precedence
+            https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+    (Lec-16) Coding Challenge #1
+            const massJohn = 92, heightJohn = 1.95, massMark = 78, heightMark = 1.69;
+            const BMIJohn = massJohn / (heightJohn * heightJohn);
+            const BMIMark = massMark / (heightMark * heightMark);
+            const markHigherBMI = BMIMark > BMIJohn;
+            console.log(markHigherBMI);
+    (Lec-17) Strings and Template Literals
+            Using `` back tick and ${}, don't need escape characters to split over multiple lines
+            Escape characters \n \t 
+    (Lec-18) Taking Decisions: if/else Statements
+    (Lec-19) Coding Challenge #2
+            if(markHigherBMI){
+                console.log(`Mark's BMI (${BMIMark}) is higher than John's (${BMIJohn})!`)
+            } else{
+                console.log(`John's BMI (${BMIJohn}) is higher than Mark's (${BMIMark})!`)
+            }
+    (Lec-20) Type Conversion and Coercion
+            Type Conversion     -       console.log(Number('1991'))     -       1991
+                                        console.log(Number('Akash'))    -       NaN
+                                        console.log(String(23))         -       '23'
+                                        console.log(Boolean('true'))    -       true
+            Coercion            -       console.log('10'-'3'-2)         -       5
+                                        console.log('10'+'3'+2)         -       1032
+                                        console.log('23'*'2')           -       46
+                                        console.log('22'/'2')           -       11
+                                        console.log('10'-'3'-2+'3')     -       53
+    (Lec-21) Truthy and Falsy Values
+            Five False Value    -       0, '', undefined, null, NaN
+                                -       console.log(Boolean(0))         -       false
+                                        console.log(Boolean(undefined)) -       false
+                                        console.log(Boolean('Akash'))   -       true
+                                        console.log(Boolean({}))        -       true
+                                        console.log(Boolean(''))        -       false
+    (Lec-22) Equality Operators: == vs ===
+            == checks value, === checks value and type
+    (Lec-23) Boolean Logic
+            && || ! Operators
+    (Lec-24) Logical Operators
+    (Lec-25) Coding Challenge #3
+            const dolphins = (96 + 108 + 89)/3;
+            const koala = (88 + 91 + 110)/3;
+            if(dolphins >= 100 && koala >=100){
+                dolphins > koala ? console.log("Dolphins wins") : koala > dolphins ? console.log("Koala wins") : console.log("Draw");
+            }else{
+                console.log("Minimum score not present")
+            }
+    (Lec-26) The Switch Statement
+            What is Inside      -       Week Example, break, default case     
+            Interview           -       Follows "strict ===" comparison in case  
+    (Lec-27) Statements and Expressions
+            What is Inside      -       Definition and Identification
+            Interview           -       Expression produces some value. Example - 1+2, 1991, true&&false, 'Hello', etc
+                                        Statement do not produce any value. Example - if/else, etc
+                                        We use Expressions in Template Literals ``
+    (Lec-28) The Conditional(Ternary) Operator
+            What is Inside      -       Examples
+            Interview           -       Ternary Operator are Expression, can be used in Template Literals
+    (Lec-29) Coding Challenge #4
+            const bill = 200;
+            const tip = (bill >= 50 && bill <= 300) ? 0.15*bill : 0.20*bill;
+            console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${tip+bill`);
+    (Lec-30) Javascript Releases: ES5, ES6+ and ESNext
+            What is Inside      -       History of JavaScript
+            Interview           -       Mocha -> LiveScript -> JScript -> ECMAScript(JavaScript) -> ES6 -> ESNext(Future JavaScript)
+                                        Babel transpile and polyfill our cod(Convert back to ES5 to ensure browser compatibility)
+    
+3) JAVASCRIPT FUNDAMENTALS - PART-2
+    (Lec-31) Section Intro 
+    (Lec-32) Activating Strict Mode
+            What is Inside      -       Definition and Usage
+            Interview           -       'use strict'; as first line of the file. Comments can be above it.
+                                        Secure code, error/bug free. Example - Defining variable is mandatory
+                                        It will reserve variable like interface, private and throw error in strict mode.
+    (Lec-33) Functions
+            What is Inside      -       Definition, Defining, Calling, Passing Arguments to Parameters, Returning, Example of returning Juice string
+            Interview           -       Function is a piece of code that we can re-use. Example - function funcName(){}
+                                        If nothing is returned from function, it resolves to undefined.
+    (Lec-34) Function Declarations Vs Expressions
+            What is Inside      -       Definition, Example of age calculator by birthYear
+            Interview           -       Function declaration uses 'function' keyword
+                                        Storing fuction in variable is Expression/Anonymous function
+                                        We can call function declaration before they are defined but Expressions don't work.
+                                        How can we store functions into variables?      -       Function is just a value as it can be stored
+    (Lec-35) Arrow Functions
+            What is Inside      -       Definition, Example of age calculator by birthYear
+            Interview           -       Syntactic Sugar, It is an Expression
+                                        Parameters bracket are necessary if there are more than one parameters else no need
+    (Lec-36) Functions Calling Other Functions
+            What is Inside      -       Example of returning Juice string cutting it to two pieces
+    (Lec-37) Reviewing Functions
+            What is Inside      -       Example of returning retirementAge if greater than zero else 'Retired'
+    (Lec-38) Coding Challenge #1
+            function calcAverage(firstScore, secondScore, thirdScore){
+                return (firstScore+secondScore+thirdScore)/3;
+            }
+            const checkWinner = function (avgDolphins, avgKoalas){
+                if(avgDolphins >= avgKoalas*2){
+                        console.log(`Dolphin wins (${avgDolphins} vs ${avgKoalas})`)
+                }else if(avgKoalas >= avgDolphins*2){
+                        console.log(`Koalas wins (${avgKoalas} vs ${avgDolphins})`)
+                }else{
+                        console.log("Draw!")
+                }
+            }
+            checkWinner(calcAverage(44,23,71), calcAverage(65,54,49));
+    (Lec-39) Introduction to Arrays
+            What is Inside      -       Definition, Ways of creating Arrays, Accessing Array, Examples
+            Interview           -       Arrays are Collection of values, for structured data, order matters
+                                        const friends = ['Akash','Shreet','Anand']
+                                        const years = new Array(1991, 1992)
+                                        Arrays and Objects are mutable, values can be changed of const array, but we cannot replace entire array
+                                        Expects expressions inside brackets
+    (Lec-40) Basic Array Operations(Methods)
+            What is Inside      -       push, pop, unshift, shift, indexOf, includes
+            Interview           -       push adds element at last, returns length of new array. Nothing added if nothing passed
+                                        pop removes element from last, returns removed element. Only one deleted anything passed
+                                        unshift adds element at start, returns length of new array. Nothing added if nothing passed
+                                        shift removes element from start, returns removed element. Only one deleted anything passed
+                                        indexOf returns the index of value passed in it, else -1
+                                        includes return true if element is there in array, else false. Strict(===) check
+    (Lec-41) Coding Challenge #2
+            function calcTip(bill){
+                const tip = (bill >= 50 && bill <= 300) ? 0.15*bill : 0.20*bill;
+                return tip;
+            }
+            const bills = [125, 555, 44]
+            const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])]
+            const totalValue = [bills[0]+tips[0], bills[1]+tips[1], bills[2]+tips[2]]
+    (Lec-42) Introduction to Objects
+            What is Inside      -       Definition, Ways of creating Objects
+            Interview           -       Key-Value pairs called Properties, for unstructured data, order doesn't matter
+    (Lec-43) Dot vs Bracket Notation
+            What is Inside      -       Ways of Creating and Retrieving Object values, Examples
+            Interview           -       Using Dot. Simple and cleaner
+                                        Using Brackets. We can put Expressions in it to compute.
+                                        const ageStr = prompt("Enter age"); console.log(obj.age) -> obj.'age' -> error
+    (Lec-44) Object Methods
+            What is Inside      -       Challenges and Examples
+            Interview           -       Any function that is attached to an object is called a method
+                                        'this' can be used to access property of object inside that object function, 
+                                        this refers to the object on which the function is called
+                                        Arrays are special kind of Objects since they use Dot notation
+    (Lec-45) Coding Challenge #3
+            const markDetails = {       fullName: 'Mark Miller', 
+                                        mass: 78, 
+                                        height: 1.69, 
+                                        bmi: '', 
+                                        calcBMI: function (){ this.bmi = this.mass / (this.height * this.height); return this.bmi;}
+                                }
+            const johnDetails = {       fullName: 'John Smith', 
+                                        mass: 92, 
+                                        height: 1.95, 
+                                        bmi: '', 
+                                        calcBMI: function (){ this.bmi = this.mass / (this.height * this.height); return this.bmi}
+                                }
+            console.log(markDetails.calcBMI(), johnDetails.calcBMI())
+    (Lec-46) Iteration: The for Loop
+            What is Inside      -       Example of Gym Exercise, Initialize, Condition, Increment
+    (Lec-47) Looping Arrays, Breaking and Continuing
+            What is Inside      -       Example of Loop Array, continue and break by typeof condition
+            Interview           -       continue exit current iteration, break exits whole loop
+    (Lec-48) Looping Backwards and Loops in Loops
+            What is Inside      -       Decrementing condition, Nested loops, Example of Exercises
+    (Lec-49) The while Loop
+            What is Inside      -       Entry Controlled loop
+            Interview           -       When we do not know how many times loop has to run
+    (Lec-50) Coding Challenge #4
+            function calcTip(bill){
+                const tip = (bill >= 50 && bill <= 300) ? 0.15*bill : 0.20*bill;
+                return tip;
+            }
+            const calcAverage = function(arr){
+                let sum = 0;
+                for(let i=0; i<arr.length; i++){
+                        sum += arr[i]
+                }
+                return sum/arr.length    
+            }
+            const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52]
+            const tips = []
+            const totalValue = []
+            for(let i=0; i<bills.length; i++){
+                tips.push(calcTip(bills[i]));
+                totalValue.push(tips[i]+bills[i])
+            }
+            console.log(tips, totalValue)
+            console.log(calcAverage(bills))
+    
+4) HOW TO NAVIGATE THIS COURSE
+    (Lec-51) Pathways and Section Roadmaps 
+    (Lec-52) Course Pathways (Text File)
+
+5) DEVELOPERS SKILLS & EDITOR SETUP
+    (Lec-53) Section Intro
+    (Lec-54) Section Roadmap (Text File)
+    (Lec-55) Setting up Prettier & VS Code
+            What is Inside      -       Install Prettier Extension, Set Format to Save and Default Formatter, Configure Prettier doubleQuote and arrowParens, User Snippets
+    (Lec-56) Installing Node.js and Setting up a Dev Environment
+            What is Inside      -       Auto reload page on save by Live Server extension. Or by using Nodejs Live Server(npm i live-server -g) then use by(live-server)
+    (Lec-57) Learning How to Code
+    (Lec-58) How to think like a Developer: Become a Problem Solver
+    (Lec-59) Using Google, StackOverflow and MDN 
+            What is Inside      -       Example to Find temperature altitude(difference in max and min temperature), concat function
+    (Lec-60) Debugging(Fixing Errors)
+    (Lec-61) Debugging with the Console and Breakpoints
+            What is Inside      -       Example of Temperature conversion bug. Developer console source. Using debugger; in code
+            Interview           -       console.warn(), console.error(), console.table()
+    (Lec-62) Coding Challenge #1
+            const printForecast = function (arr){
+                let str = '';
+                for(let i=0; i<arr.length; i++){
+                        str += ` ... ${arr[i]} degree C in ${i+1} days`
+                }         
+                str += ` ...`;   
+                console.log(str);
+            }
+            printForecast([12, 5, -5, 0, 4]);
+
+6) HTML & CSS CRASH COURSE
+    (Lec-63) Section Intro
+    (Lec-64) Basic HTML Structure and Elements
+    (Lec-65) Attributes, Classes and ID's
+            What is Inside      -       Inline <a> and Block <h> tags
+    (Lec-66) Basic Styling with CSS
+            What is Inside      -       Selectors(Element, Class, Id, Child(Space))
+    (Lec-67) Introduction to the CSS Box Model
+            What is Inside      -       Width, Height, Padding, Margin, Border, Fill Area
+
+7) JAVASCRIPT IN THE BROWSER: DOM AND EVENTS FUNDAMENTALS
+    (Lec-68) Section Intro
+    (Lec-69) Section Roadmap (Text File)
+    (Lec-70) PROJECT #1: Guess My Number!
+            What is Inside      -       document.querySelector('.message').textContent. QuerySelector selects one element only
+    (Lec-71) What's the DOM and DOM Manipulation 
+            What is Inside      -       Definition, DOM!=Javascript, WebAPI(querySelector())
+    (Lec-72) Selecting and Manipulating Elements
+            What is Inside      -       document.querySelector('.message').value - For Input tags
+    (Lec-73) Handling Click Events 
+            What is Inside      -       Event Listener(document.querySelector('.btn').addEventListener('click',()=>{}))
+    (Lec-74) Implementing the Game Logic
+    (Lec-75) Manipulating CSS Styles
+            What is Inside      -       document.querySelector('.message').style.backgroundColor
+    (Lec-76) Coding Challenge #1
+            What is Inside      -       Reset functionality
+    (Lec-77) Implementing Highscrores
+    (Lec-78) Refractoring our Code: The DRY Principle
+    (Lec-79) PROJECT #2: Modal Window
+            What is Inside      -       QuerySelector vs QuerySelectorAll(gives NodeList)
+    (Lec-80) Working with Classes
+            What is Inside      -       document.querySelector('modal').classList.remove('hidden')
+                                        document.querySelector('modal').classList.add('hidden')
+                                        document.querySelector('modal').classList.toggle('hidden')
+    (Lec-81) Handling an "Esc" Keypress Event
+            What is Inside      -       Keyboard Events(Global Events), 
+                                        document.addEventListener('keydown', function ($event){ $event.key==='Escape'})
+                                        document.querySelector('modal').classList.contains('hidden')
+    (Lec-82) PROJECT #3: Pig Game
+            What is Inside      -       document.getElementById('idName')
+    (Lec-83) Rolling the Dice
+    (Lec-84) Switching the Active Player
+            What is Inside      -       
+    (Lec-85) Holding Current Score
+    (Lec-86) Resetting the Game
+
+8) HOW JAVASCRIPT WORKS BEHIND THE SCENES
+    (Lec-87) Section Intro
+    (Lec-89) Section Roadmap (Text File)
+    (Lec-90) An High-Level Overview of Javascript
+            What is Inside      -       Definition
+            Interview           -       JavaScript is a 
+                                        High-level                      -       Don't have to worry about stuff like memory management
+                                        Prototype based Object-oriented -       Everything is object except primitive types ("arr.push" means "arr.prototype.push")
+                                        Multi-paradigm                  -       Structuring style of code like Imperitive or Declarative. (Procedural, Object Oriented and Functional)
+                                        Interpreted or JIT compiled     -       0 and 1(Machine Code) but this is Abstraction code. So uses JIT
+                                        Dynamic                         -       Dynamically typed
+                                        Single threaded                 -       Set of Instructions in Machines Processor
+                                        Garbage Collected               -       Automatically cleans
+                                        with first class functions      -       Functions are treated as variables and hence we can pass functions
+                                        with non-blocking event loop    -       Puts into event loop and takes whenever function call is made
+                                        concurrency model               -       How multiple tasks are handled on single thread
+    (Lec-91) The JavaScript Engine and Runtime
+            What is Inside      -       Engine Definition, Compilation vs Interpretation, JIT, Browser
+            Interview           -       JavaScript Engine is a program that executes Javascript code
+                                        -Consists of Call Stack(Here code is executed) and Heap(Object in memory) in JS Engine
+                                        -Consists of Web API like DOM, Timers, Fetch API, etc and are not part of Javascript
+                                        -Consists of Callback Queue like on click, timer, data, etc
+                                        Event Loop - Passes call from Callback Queue to Call Stack
+                                        Compilation - Entire code is converted into binary file and written to binary file
+                                        Interpretation - Line by line, not stored to binary file, directly executed when program runs. Hence slower
+                                        JIT - Entire code to machine code, not stored to binary file, directly executed
+                                        Steps - 
+                                        1) Parsing(Abstract Syntax Tree AST) - Also checks for errors
+                                        2) Compilation - Converted to machine code(JIT compilation)
+                                        3) Execution -  Happens in call stack
+                                        4) Optimization - From Execution to Compilation many times in during Execution
+    (Lec-92) Execution Context and The Call Stack
+            What is Inside      -       Execution Context
+            Interview           -       Execution Context 
+                                                Execution Context is Environment where code runs
+                                                Creation of Global Execution Context for top-level code(Not inside a function), Only one Global Execution Context
+                                                Execution of Global Execution Context of top-level code(Inside Global EC)
+                                                Execution of Functions and waiting for Callbacks. For each function a new Execution Context is created. 
+                                                Functions together make the Call Stack
+                                        Inside Execution Context(Creation phase, just before execution)       
+                                                1) Variable Environment - let,const,var,functions,arguments object
+                                                2) Scope Chain          - Consists references to variables located outside of current function
+                                                3) this keyword     
+                                                Note - arguments and this keyword are not in arrow functions
+                                        Call Stack
+                                                Place where Execution Context get stacked on top of Each other, to keep track of where we are in the execution
+    (Lec-93) Scope and the Scope Chain 
+            What is Inside      -       Scope Chain
+            Interview           -       Scoping means how our program variables are organised and accessed
+                                        Where do variables live? or Where can we access a certain variable, and where not?
+                                        Lexical Scoping         -       Scoping is controlled by placement of functions and blocks in the code
+                                        Scope                   -       Scope is the space or environment in which a certain variable is declared(variable environment in case of functions)
+                                                                        There is global scope, function scope and block scope
+                                        Scope of Variable       -       Region of our code where a certain variable can be accessed
+                                        Global Scope            -       Outside of any function or block(top-level), can be accessed everywhere
+                                        Function Scope          -       Accessible only inside of a function and not outside(Local Scope)
+                                        Block scope             -       Accessible only inside a block. Applies to let and const only.
+                                                                        Functions are also blocked scope(Only in strict mode)
+    (Lec-94)
+
+
+
+
+
+
+    Flowchart creation  -       diagrams.net

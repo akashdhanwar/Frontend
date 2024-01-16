@@ -1,0 +1,336 @@
+1) INTRODUCTION -
+    (Lec-1) Introduction
+    (Lec-2) What is Javascript 
+            JavaScript is Dynamic, Interpreted and Weakly Typed Language compiled at Runtime.
+            It can run on Browser or directly on any Machine(Host Environment) 
+            JS was initially created to make webpages more dynamic
+            MDN is its documentation
+    (Lec-3) Javascript in Action
+            Simple Example
+    (Lec-4) Learning Community Link (Text File)
+            Discord: https://academind.com/community/
+    (Lec-5) How Javascript is Executed
+            Javascript Engine(V8 Chrome) - Parse, compile and executes the code on a single thread
+    (Lec-6) Dynamic vs Weakly Typed Languages 
+            Dynamic      -  Code is not pre-compiled like in C++. 
+                            Evaluated and executed at runtime
+                            Code can change at runtime(eg. type of a variable)
+            Weakly Typed -  Data types are assumed autmatically, no need to specify
+    (Lec-7) Javascript executes in a Host Environment
+            Browser-side or Server-side
+            Browser-side -  Cannot access file system or interact with operating system
+                            Can access Html Css 
+            Server-Side -   V8 is run on Server in Nodejs. 
+                            It can access file system but cant manipulate Html Css
+    (Lec-8) What's in this course
+            Core Basics                     -   Getting started 
+                                                Language Basics
+                                                Base Syntax Efficient Development & Debugging
+                                                Control Structures(if, Loops,...)
+                                                Behind the scenes of JS 
+                                                Closer look at Functions 
+                                                DOM Basics 
+                                                Array & Iterable 
+                                                Objects
+            Building a Strong Foundation    -   Classes & OOPS 
+                                                Constructor Function & Prototypes 
+                                                More about DOM & Browser API 
+                                                Events
+                                                Functions Deep Dive
+                                                More about Numbers and Strings
+                                                Asynchronous Code
+                                                Background Http(Ajax)
+            Advanced Concepts               -   3rd Party Libraries
+                                                Javascript Modules
+                                                Tooling(Webpack, Babel,...)
+                                                Working with Browser Storage
+                                                Browser Support 
+                                                Javascript Frameworks
+                                                Meta Programming 
+                                                Nodejs Introduction 
+                                                Security
+                                                Deployment
+                                                Performance Optimization & Memory Leaks
+    (Lec-9) How to get the most out of this course 
+    (Lec-10) Using Course Resources (Text File)
+    (Lec-11) Javascript vs Java 
+    (Lec-12) A Brief History of Javascript 
+    (Lec-13) Setting up Development Environment 
+            Setup Extensions, Learn shortcuts
+    (Lec-14) Course FAQ's (Text File)
+
+
+2) BASICS: Variables, Data Types, Operators and Functions-
+    (Lec-15) Introduction
+            Dive Into Core Syntax
+            Understanding Variables & Data Types
+            Working with Operators
+            Explore and Use Functions
+    (Lec-16) Setting up the Project (Calculator)
+    (Lec-17) More on Version Control & Git(Text File)
+    (Lec-18) Adding Javascript to the website
+            Script tag in head tag. Either the code in tag or the src url
+            Script tag with src at end of body 
+    (Lec-19) Introducing Variables & Constants
+    (Lec-20) Declaring & Defining Variables
+            Letter, Digit, $, _ are allowed. Starting with digits not allowed
+    (Lec-21) Working with Variables & Operators
+            + , - , * , / , % , **
+            = , += , -= , *- , /=
+            ++ , --
+    (Lec-22) Understanding the Starting Code (Calcultor)
+    (Lec-23) Data Types: Numbers & Strings
+            Numbers, Strings, Booleans(true/false), Objects, Arrays, undefined(default value of uninitialized variables) , null(not a default value)
+            Nan(This is not a data type, mathematical calculation result)
+    (Lec-24) Using Constants
+    (Lec-25) More on Strings
+            Template Literal `` - ${name} for mapping value in string literal, can be multiline
+            Escape Characters - \n, \t, etc
+    (Lec-26)
+
+
+    Conversion -
+        Convert html input to a number using parseInt(input) OR +input 
+        Convert to string by toString()
+        3 + 3 = 6
+        3 + '3' = 33
+        'hi' - '3' = NaN. Only + supports string and numbers
+        3 * '3' = 9
+        '3' - 1 = 2
+
+        typeof hello = 'function'
+        typeof null = 'object'
+        typeof undefined = 'undefined'
+        typeof NaN = 'number'
+
+    FUNCTIONS -
+    Shadowing means same variable in different scope. Example, same variable name created in function and global
+    addEventListener for event handling, indirectly calls function on event
+
+    Defer vs Async script import(for external script imports) -
+    If we give script in head tag, scripts are loaded/downloaded and executed in sequence(not parallel to parsing), then remaining parsing is done. This could give console error since html is not parsed/ready.
+    If we give script at end of body tag, then html is parsed first then script is loaded and executed.
+    defer   -   Scripts are in head tag. Load scripts parallel to html parsing, executes them after parsing
+    async   -   Scripts are in head tag. Load scripts parallel to html parsing, executes them right away, the script loaded first is executed first. Then remaining parsing is done.
+
+
+3) EFFICIENCY_AND_DEBUGGING -
+    VS CODE PREFERENCES -
+    Shortcuts 
+    Extensions - Prettier
+    Settings
+
+    DEBUGGING -
+    Console.log      - Use console.log()
+    Browser Devtools - Breakpoints, Conditional Breakpoints, Event Listener Breakpoints, 
+                       F9, Scope(Value, can be changed), Watch(Watch any Value changing over time)
+                       Code in sources can be change temporarily
+    Inside VsCode    - Debugger for Chrome extension. Click of left of line number for breakpoint, then Debug -> Run Debugger
+
+
+4) CONTROL_STRUCTURES -
+    Conditional Statements          -   if, else, else-if Statements    -   Resolve to true/false (Lec-73,74,75,76,77)
+                                                                            Note that Comparing Objects or Array give false. Checks hash value (Lec-78)
+    Boolean Values and Operators    -   Operator Precedence             -   Check on MDN documentation (Lec-80)
+                                                                            && has higher precedence than || (Lec-79)
+                                        Falsy/Truthy value (Coercion)   -   var name = 'Akash'; if(name){ // true } (Lec-81,82)
+                                                                            if(0) = false. Other numbers = true.
+                                                                            if('') = false. Other string if('hello') = true.
+                                                                            if({}) = true, if([]) = true.
+                                                                            null, undefined, NaN = false
+                                        Ternary Operator(Lec-93)        -   a==10 ? A : B
+                                        Expression vs Statements(Lec-94)-   Expression yeilds value that can be stored
+                                                                            Statements do not yield value, all Expressions are Statements 
+                                        Tricks(Lec-95)                  -   !!1 = true, !!"" = false
+                                                                            let name = "" || "Max" - This will store Max in name 
+                                                                            let name = "Don" || "Max" - This will store Don in name 
+                                                                            let name = "" || "" - This will store """ in name 
+                                                                            let name = "" && "Don" - This will return ""
+                                                                            let name = "Max" && "Don" - This will return Don
+                                                                            Note -> ===, > just generate new boolean values which are used in the comparison. || and && generate NO booleans (Lec-96)
+                                        switch case(Lec-97)   
+    Loops(Lec-98)                   -   for Loop(Lec-99)                
+                                        for-of Loop(Lec-100)                -   For every element in an array. for(const el of array){ console.log(el) }. No access to the index
+                                        for-in Loop(Lec-101)                -   For every key in the object. for(const key in object){ console.log(key) }
+                                        while, do-while Loop(Lec-102)       -   Until the condition is false
+                                        break, continue(Lec-103,104)
+                                        Labelled Statements(Lec-105)        -   Relate some code from some other place
+                                                                                outerLoop : for(let i=0;i<3;i++){
+                                                                                    for(let j=0;j<3;j++){ break outerLoop; }
+                                                                                }
+    Error Handling(Lec-106)         -   Throwing errors manually(Lec-107)   -   if(isNan("Hello")){ throw {message: 'Error'}; }
+                                        try-catch(Lec-108)                  -   try{ Error Prone Code } catch(){ Handling code } finally{ Cleanup Work }
+    Wrap-Up(Lec-109,110)
+
+
+5) BEHIND THE SCENES ES3, ES5 ES6 (Lec-111) -
+    ES5 vs ES6+ Syntax(Lec-112)     -   let and const introduced in ES6 (Lec-113)
+                                            var     -   Function & Global Scope, Hoisting allowed. Can be recreated in same scope
+                                            let     -   Block Scope 
+                                            const   -   Block Scope
+                                        Hoisting for var (Lec-114)
+                                        "use strict"; at start of file or in a function to enable strict mode(for strict declare var name instead of name) (Lec-115)
+    How Javascript works            -   In Browser, Interpreter parses code and handovers the bytecode to Compiler. Compiler converts to machine code and runs on Computer (Lec-116)
+                                        (Lec-117,118) Browser manages Heap and Stack - Can be checked by adding breakpoints
+                                        Heap(Memory Allocation) - Stores data in your system memory and manages access to it. 
+                                        Stack(Execution Context) - Manages your program flow(function calls and communication). Stack controls which thing is happening, since Javascript is single-threaded.
+                                        Note that the Event Loop(listeners) will work even after stack is emptied(Later in this course). It is in the Browser and not in Javascript Engine
+                                        (Lec-119) Primitives vs Reference values
+                                        Primitive Values -  String, Numbers, Boolean, null, undefined, Symbol
+                                                            Stored on memory(normally on Stack)
+                                                            = copies the value to different variable, copied by Value
+                                        Reference Values -  All other Objects 
+                                                            Stored on memory(Heap), variable stores the pointer to address
+                                                            Copying copies the address and not the value, copied by Reference
+                                                            Can be copied by Value using Rest operator
+                                        (Lec-120) Garbage Collection
+                                        How is Heap memory managed - Garbage Collector V8 in Chrome. 
+                                        It checks unused/empty objects(objects without references) and clears them.
+                                        Memory Leaks are objects which have reference but not in use.
+                                        (Lec121,122) Wrapup
+
+6) CLOSER LOOK AT FUNCTIONS
+    (Lec-123) Introduction 
+            Different ways of creating functions
+            Anonymous Functions 
+            Callback functions & Functions in functions
+            Default Arguments & Rest Operator
+            bind() & more built-in functions
+    (Lec-124) Recap Function Knowledge - What we know thus far 
+            Functions are "Code on demand"
+    (Lec-125) Parameters vs Arguments 
+            Parameters are defined in function parenthesis
+            Arguments are those values which we pass to the function 
+    (Lec-126) Functions vs Methods
+            Functions are normal created functions. eg- function hello(){}
+            Methods are functions that are defined in some object value. eg- {age: function greet(){}}. Generally predefined like addEventListener
+    (Lec-127) Functions are Objects
+            Special type of Object with predefined properties, check by printing function
+    (Lec-128) Function Expressions: Storing Functions in Variables 
+    (Lec-129) Function Expressions vs Function Declarations
+            Function Declaration -  Not storing in variable. Hoisted to top. 
+                                    No need to define function before we call them
+            Function Expression  -  Storing function in variable. Hoisted to top. 
+                                    Need to define function before we call them
+    (Lec-130) Anonymous Functions 
+            Function without name, only one place usage
+            Name to function can be given for debugging
+    (Lec-131) Working on the Project: Adding User Choices to the game(Stone Paper Scissor)
+    (Lec-132) Implementing the core game logic
+    (Lec-133) Introducing Arrow Functions
+            Syntactical Sugar
+    (Lec-134) Arroy Function Syntax (Text File)
+    (Lec-135) Outputting Game Messages to the User 
+    (Lec-136) Default Arguments in Functions
+            In case undefined is passed, function will take default value in this case only
+    (Lec-137) Introducing Rest Operator
+            For passing dynamic number of arguments to a function, it creates an array of it. function abc(...arg){}
+            Rest parameter must be only one and must be last parameter
+            Interview - arguments is available in function defined with function keyword if we do not define parameters
+    (Lec-138) Creating Functions inside Functions   
+    (Lec-139) Understanding Callback Functions 
+            Asynchronous Function calls returns a callback in future
+    (Lec-140) Working with 'bind()'
+            It prepares the function for execution in some time 
+            Used to pre-configure a functions argument
+            It takes (this, arguments)
+            The arguments passed in function call will be appended as the last parameter
+    (Lec-141) Adding bind() to Calculator Project
+    (Lec-142) call() & apply()
+            call() and apply() immidiately executes the function but bind() dont 
+    (Lec-143) Wrapup
+    (Lec-144) Useful Resources (Text File)
+
+7) WORKING WITH THE DOM IN JAVASCRIPT
+    (Lec-145) Module Introduction
+            HTML, DOM & Javascript
+            Nodes & Elements
+            Querying DOM Nodes & Traversing the DOM 
+            Evaluating & Manipulating DOM Nodes
+            Creating & Removing DOM Nodes
+    (Lec-146) What's the DOM
+            Loaded and Rendered Html code on Browser
+            document is the Root DOM Node which is present in global window object 
+    (Lec-147) Document & Window Object 
+    (Lec-148) Understanding the DOM and how it's created
+            Browser creates object(tree of nodes) of html tags
+            Nodes may be Element nodes(tags) or Text Nodes(Text data in between of tags)
+    (Lec-149) Nodes & Elements - Querying the DOM Overview
+
+
+    ---------------------------------
+
+8) MORE ON ARRAYS AND ITERABLES
+    (Lec-183) Module Introduction 
+            Diferent ways of Creating Arrays
+            Work with Arrays - Deep Dive 
+            Important Array Methods
+            Other Iterables - Maps and Sets
+    (Lec-184) What is an Iterable and Array-Like Objects
+            Iterator is an object that implement the 'iterable' protocol and have an @@iterator method (i.e. Symbol.iterator)
+            Iterator is an object where we can use for-of loop
+            Not every iterable is an Array. Other iterables are NodeList, String, Map, Set
+            Array-like objects are objects that have a length property and uses indexes to access items
+            Not every Array-like object is an Array. Other Array-like are NodeList, String
+    (Lec-185) Creating Arrays
+            1-
+                const arr = [1,2]           
+                const arr = ['Hi']          
+            2- new keywork uses constructor function           
+                const arr = new Array(1,2)      -   [1,2] 
+                const arr = new Array(5)        -   []  Empty Array of size 5
+                const arr = new Array('Hi')     -   ['Hi']
+            3-
+                const arr = Array('Hi')         -   ['Hi']        
+                const arr = Array(1,2)          -   [1,2]        
+                const arr = Array(5)            -   Empty Array of size 5
+            4-
+                const arr = Array.of('Hi')      -   ['Hi']
+                const arr = Array.of(1,2)       -   [1,2]                   
+                const arr = Array.of(2)         -   [2]   
+            5- Takes iterable/Array-like object 
+               Used for splitting strings    
+               Convert NodeList to Array     
+                const arr = Array.from('Hi')    -   ['H','i']
+                const arr = Array.from(1)       -   []
+                const arr = Array.from(1,2)     -   Error
+    (Lec-186) Which data can you store in Arrays 
+            Numbers, Strings, Objects
+    (Lec-187) push(), pop(), unshift(), shift() - Adding and Removing Elements
+            push() - Adds element at end of array. Returns length of new Array
+            unshift() - Adds element at start of array. Returns length of new Array
+            pop() - Removes last element of Array . Returns deleted element
+            shift() - Removes first element of Array. Returns deleted element
+    (Lec-188) The splice() method
+            Insert elements in between of Array and Delete elements in between of Array, returns deleted elements
+            Works for negative index
+            Only available for Arrays and not for Iterables/Array-like Objects, hence we use from method to convert Iterables to Arrays
+            (startIndex, No. of elements to be deleted, Elements to be added at the index)
+    (Lec-189) Selecting Ranges & Creting copies with slice()
+            arr.slice() - Returns a new Array and hence copy old array to new
+            arr.slice(startIndex, endIndex) - Select specific ranges by passing start and end index
+            Returns copy of the Array
+            Works with negative index, but both should be negative else it returns empty array
+    (Lec-190) Adding Arrays to Arrays with concat()
+            Returns a new Array after concatenation
+    (Lec-191) Retrieving Indexes with indexOf() & lastIndexOf()
+            indexOf(searchElement, fromIndex) - Searches from start of Array, returns the first found index else returns -1
+            lastIndexOd(searchElement, fromIndex) - Searches from last of Array, returns the index else returns -1
+            Works only with Primitive values and not with objects 
+    (Lec-192) Finding Stuff: find() & findIndex()
+            
+
+
+            
+    
+
+
+
+
+
+LECTURE 146
+Build Calculator with logs
+Resume Builder
+Money Saver 
+Stone Paper Scissor game
+Download Code and resources at end of course

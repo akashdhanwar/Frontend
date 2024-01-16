@@ -1,0 +1,24 @@
+.net is a software/product from microsoft for developing desktop/web/mobile applications
+Microsoft provided set of programming languages(30+) inside .net like C#, VCPP.net, VB.net, F#, J#
+C# is an extension for C++, C++ is an extension for C
+C# is   Object Oriented(Security, Reusability)
+        Platform Independent(On any OS)
+        Language Independent(Code can be cross-used in .net all languages)
+
+Visual Studio .net is an IDE by Microsoft for developing .net applications(developing console, windows, web applications)
+Solution is a collection of Projects. Project is collection of Items(Like Classes). View -> Solution Explorer
+namespace is logical container for grouping in C# like folders. Inside it, there are classes. System contains all the classes
+Program class is the default class. Console.WriteLine("Hello")
+Example - namespace is surName, class is family members
+Only one static void Main method, for selecting one open Solution Explorer -> Properties -> Startup Object
+
+constructor     -   It is a special method present inside class responsible for initializing variables of the class
+                    Name of constructor is same as the class name in which it is present, it is a non value returning methods
+                    Its the responsibility of programmer to define constructor under his class
+                    If he fails, an implicit(default) constructor without any parameters gets defined in the class by the compiler
+                    Implicit defined constructors are public
+                    We can also define a constructor, we then call it a explicit constructor, can be parameterless or parameterized
+                    Constructor is called on Class Instance creation
+                    public Test(){ // initialization }
+F9 adding breakpoint, F11 to continue                    
+
