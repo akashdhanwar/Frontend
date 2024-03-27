@@ -6,3 +6,7 @@
 - Angular Upgrade
   npm uninstall -g @angular/cli
   npm install -g @angular/cli@latest
+
+- Bootstrap
+  npm i --save bootstrap
+  angular.json > add styles path "node_modules/bootstrap/dist/css/bootstrap.min.css"
